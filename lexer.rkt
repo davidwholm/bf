@@ -1,12 +1,9 @@
 #lang racket/base
 
 (require brag/support
-         racket/function
-         racket/contract)
+         racket/function)
 
-(provide (contract-out
-          [make-tokenizer
-           (->* (input-port?) (path?) procedure?)]))
+(provide make-tokenizer)
 
 (define bf-lexer
   (lexer-srcloc
